@@ -65,7 +65,7 @@ class ConversationManager:
         self.prev_hash: Optional[str] = None
         self.just_sent, self.skip_frames = False, 0
         self._task: Optional[asyncio.Task] = None
-        print("Using " + ("DSAPI" if debug else "mock API"))
+        print("Using " + ("DSAPI" if not debug else "mock API"))
     # ----- callbacks for ControlOverlay -----
     def start(self):
         if not self._task:
